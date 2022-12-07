@@ -1,0 +1,14 @@
+module Y(
+	input [3:0] ARd,
+	input choose,
+	output reg [3:0] output
+);
+
+always @(*) begin
+	if(choose==1)
+		output = 14;
+	else
+		output = ARd
+end
+
+endmodule

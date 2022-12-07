@@ -1,0 +1,17 @@
+module datamemory(
+	input clk,
+	input wen,
+	input [5:0] memoryadrs,
+	input [31:0] inptdata,
+	output reg [31:0] outptdata
+);
+
+logic [31:0] data [16];
+								  
+always @(posedge clk) begin
+	if(wen == 1) data[memoryadrs] <= inptdata;
+end
+
+assign outptdata = data[memoryadrs];
+
+endmodule

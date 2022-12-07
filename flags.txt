@@ -1,0 +1,14 @@
+module flags(
+	input update_flags,
+	input [3:0] new_flags,
+	input clk,
+	output [3:0] all_flags
+);
+
+initial all_flags = 0;
+
+always @(posedge clk) begin
+	if (update_flags) all_flags <= new_flags;
+end
+
+endmodule

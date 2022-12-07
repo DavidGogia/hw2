@@ -1,0 +1,10 @@
+module instructionmemory(
+	input [31:0] PC_out,
+	output [31:0] instruction
+);
+
+logic [31:0] registers [15:0]; 
+
+assign instruction= registers[PC_out];
+  
+endmodule

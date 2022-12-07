@@ -1,0 +1,8 @@
+module PCinc(
+	input [31:0] prev_adrs,
+	output [31:0] curr_adrs
+);
+
+assign curr_adrs = prev_adrs + 1;
+
+endmodule

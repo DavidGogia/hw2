@@ -1,0 +1,14 @@
+module X(
+	input [31:0] ALU_output,
+	input [31:0] data_memory,
+	input choose,
+	output reg [31:0] output
+);
+
+always @(*) begin
+	if(choose) output = data_memory;	
+	else output = ALU_result;
+	end
+end
+
+endmodule
